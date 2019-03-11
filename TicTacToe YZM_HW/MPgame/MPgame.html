@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bir</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="connection.js"></script>
+  <script type="text/javascript" src="board.js"></script>
+  <script type="text/javascript" src="game.js"></script>
+   <link rel="stylesheet" type="text/css" href="xox.css">
+   <link rel="stylesheet" href="css/styleBar.css">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Tic Tac Toe Oyunu</h1>
+  <p>Bir Yazılım Sınama Ödevi #1</p>
+    <div style="background-color:lightblue">
+      <h3> Ağ üzerinden Oyun</h3>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+      <div class="col-sm-4">
+          <div class="btn-group btn-group-justified">
+            <div id="progressBar">
+              <div class="bar"></div>
+            </div>
+            <center>
+            <div class="center">
+              <div id="message"></div>
+    	           <table id="board">
+    													<tr>
+                                  <td class="cell" id="0"></td>
+                                  <td class="cell" id="1"></td>
+                                  <td class="cell" id="2"></td>
+                              </tr>
+                              <tr>
+                                  <td class="cell" id="3"></td>
+                                  <td class="cell" id="4"></td>
+                                  <td class="cell" id="5"></td>
+                              </tr>
+                              <tr>
+                                  <td class="cell" id="6"></td>
+                                  <td class="cell" id="7"></td>
+                                  <td class="cell" id="8"></td>
+                              </tr>
+    													</tr>
+    	</table>
+
+      <div class="endgame">
+      <div class="text"></div>
+      <button onClick="startGame()">Replay</button>
+
+    	<input type="button" id="reset" value="Play another" />
+    <script>
+    var table = document.getElementById('board');
+    var game = new Game(table);
+    game.run();
+    </script>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
